@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import css from '../Body/Body.module.css'
 import Task from '../Task/Task'
+import CreateTaskBar from '../CreateTaskBar/CreateTaskBar'
 
 const Body = () => {
+  const [tasks, setTasks] = useState([])
+
+  const taskAdd = (text)=>{
+    setTasks(prev =>[...prev,{
+      id: Date.now(),
+      text,
+      completed:false
+    }])
+  }
+
   return (
     <div className={css.body_section}>
         <ul className={css.body_ul}>
-            <Task taskName="Task1 Static Mock" taskDescr="Task1 Static Mock Description" taskStatus="Status:Done" />
-            <Task taskName="Task2 Static Mock" taskDescr="Task2 Static Mock Description" taskStatus="Status:Not Done" />
-            <Task taskName="Task3 Static Mock" taskDescr="Task3 Static Mock Description" taskStatus="Status:Done" />
+            <CreateTaskBar addTask={taskAdd}/>
+           {tasks.map(task=>(
+            <Task key={task.id} taskName={task.text}/>
+           ))}
         </ul>
     </div>
   )
