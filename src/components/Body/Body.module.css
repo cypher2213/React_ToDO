@@ -1,0 +1,12 @@
+.body_section{
+    background: #202450;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.body_ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}

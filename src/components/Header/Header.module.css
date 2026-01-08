@@ -1,0 +1,15 @@
+.header_section{
+    background-color: black;
+    max-width: 768px;
+    height: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.header_title{
+    color:white;
+    font-family: "Jost", sans-serif;
+    margin: 0;
+}

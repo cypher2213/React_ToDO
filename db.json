@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "text": "Learn JSON Server",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "text": "Build Todo App",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "text": "Learn React",
+      "completed": true
+    }
+  ]
+}
