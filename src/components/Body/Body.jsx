@@ -19,7 +19,7 @@ const Body = () => {
         <ul className={css.body_ul}>
             <CreateTaskBar addTask={taskAdd}/>
            {tasks.map(task=>(
-            <Task key={task.id} taskName={task.text}/>
+            <Task key={task.id} taskName={task.text} isCompleted={task.completed}/>
            ))}
         </ul>
     </div>
