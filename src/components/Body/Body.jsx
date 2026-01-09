@@ -20,6 +20,17 @@ const Body = () => {
     }])
   }
 
+ const taskDone = (id) => {
+  setTasks(prev => 
+    prev.map(task => 
+      task.id === id
+        ? { ...task, completed: !task.completed }
+        : task
+    )
+  )
+}
+
+
   useEffect(()=>{
     localStorage.setItem('task', JSON.stringify(tasks),[tasks])    
   })
@@ -28,7 +39,8 @@ const Body = () => {
         <ul className={css.body_ul}>
             <CreateTaskBar addTask={taskAdd}/>
            {tasks.map(task=>(
-            <Task key={task.id} taskName={task.text} isCompleted={task.completed}/>
+            <Task key={task.id} taskName={task.text} isCompleted={task.completed}  taskDone={() => taskDone(task.id)}/>
+            
            ))}
         </ul>
     </div>
