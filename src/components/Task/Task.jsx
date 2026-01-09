@@ -7,7 +7,7 @@ const Task = ({taskName, isCompleted, taskDone}) => {
     <li className={css.item_body}>
         <h3 className={css.task_title}>{taskName}</h3>
         <p className={css.task_completed}>Status: {isCompleted ? 'Completed' : 'In progress'}</p>
-        <button onClick={taskDone} type='button'>{isCompleted ? 'Undo' : 'Done'}</button>
+        <button className={css.task_button} onClick={taskDone} type='button'>{isCompleted ? 'Undo' : 'Done'}</button>
     </li>
     </>
   )

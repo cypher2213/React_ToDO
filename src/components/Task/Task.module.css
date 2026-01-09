@@ -41,3 +41,24 @@ p{
   font-family: "Quicksand", sans-serif;  
   text-align: center; 
 }
+
+.task_button{
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.5s ease;
+  font-family: "Quicksand", sans-serif;  
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+
+.task_button:hover{
+    background-color: #474a51;
+    box-shadow: 0 0 10px 2px #e8eff9;
+}
